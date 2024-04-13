@@ -41,7 +41,7 @@ all it's subscribers receive an email with the post title and description in it.
 ## Available API Routes
 ----------------------------------------------------------------------------------------|
 | ROUTE                           | METHOD | Description                                |
-|---------------------------------------------------------------------------------------|
+|---------------------------------|--------|--------------------------------------------|
 |`/api/websites`                  | GET    | Get the list of available websites.        |
 |`/api/websites/{id}/posts`,      | GET    | Get the posts for a given website.         |
 |`/api/websites/{id}/posts/new`   | POST   | Create a new post for the given website.   |
@@ -72,3 +72,8 @@ To subscribe a new user to a website,
 
 ## Processing the queue
 - Run `php artisan queue:work` to process the queued notifications.
+
+
+## SAMPLE POSTMAN COLLECTION
+A sample postman collection has been included and is located at
+<a href="simple-subscription.postman_collection.json">simple-subscription.postman_collection.json</a>
