@@ -8,6 +8,9 @@ use Symfony\Component\HttpFoundation\Response;
 use App\Models\Post;
 use App\Models\Website;
 
+use App\Jobs\SendNotifications;
+use App\Notifications\PostPublished;
+
 
 class PostController extends Controller
 {
@@ -28,7 +31,10 @@ class PostController extends Controller
       // Retrieve the validated input...
       $validated = $validator->validated();
       $data = $validator->safe()->only(['title','description','body']);
-      $post = Post::create(array_merge($data,['website_id' => $website_id]));
+      $post = Post::create(array_merge($data,[
+        'website_id' => $website_id,
+        'notifications_sent' => 0,
+      ]));
 
       return response()->json([
         'success' => true,

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text('body');
             $table->unsignedBigInteger('website_id');
             $table->foreign('website_id')->references('id')->on('websites');
+            $table->integer('notifications_sent');
             $table->timestamps();
         });
     }

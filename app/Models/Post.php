@@ -14,6 +14,7 @@ class Post extends Model
         'description',
         'body',
         'website_id',
+        'notifications_sent'
     ];
 
     public function website() {
