@@ -7,6 +7,11 @@ all it's subscribers receive an email with the post title and description in it.
 ## How to run
 ### Pre-requisites
 
+### 0. Stack
+- PHP 8.*
+- Laravel 11.*
+- MySQL 8.3.*
+
 ### 1. Configure MySQL database
 - Ensure you have a MySQL database up and running.
 - Create a MySQL database using the command `CREATE DATABASE <database_name>`.
@@ -34,7 +39,10 @@ all it's subscribers receive an email with the post title and description in it.
   MAIL_FROM_NAME="${APP_NAME}"
   ```
 
-### 3. Seed the database with websites
+### 3. Install dependencies
+- Run `composer install` to install the necessary dependencies.
+
+### 4. Seed the database with websites
 - Run `php artisan db:seed --class=WebsiteSeeder` to seed the database with website.
 
 
