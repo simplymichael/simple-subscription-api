@@ -13,6 +13,9 @@ class PostPublished extends Notification
 {
     use Queueable;
 
+    public $post;
+    public $website;
+
     /**
      * Create a new notification instance.
      */
@@ -37,6 +40,9 @@ class PostPublished extends Notification
      */
     public function toMail(object $notifiable): MailMessage
     {
+        $post = $this->post;
+        $website = $this->website;
+
         return (new MailMessage)
                 ->line("New post '$post->title' published on website $website.")
                 //->action('Click to view post', url("/posts/$post->id"))

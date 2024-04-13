@@ -14,10 +14,13 @@ class SendNotifications implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
+    public $subscribers;
+    public $notification;
+
     /**
      * Create a new job instance.
      */
-    public function __construct($users, PostPublished $notification)
+    public function __construct($subscribers, PostPublished $notification)
     {
         $this->subscribers = $subscribers;
         $this->notification = $notification;

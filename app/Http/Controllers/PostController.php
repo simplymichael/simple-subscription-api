@@ -8,10 +8,6 @@ use Symfony\Component\HttpFoundation\Response;
 use App\Models\Post;
 use App\Models\Website;
 
-use App\Jobs\SendNotifications;
-use App\Notifications\PostPublished;
-
-
 class PostController extends Controller
 {
     public function store(Request $request, $website_id) {

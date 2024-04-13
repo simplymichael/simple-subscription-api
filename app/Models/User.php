@@ -23,6 +23,6 @@ class User extends Authenticatable
 
     public function subscriptions()
     {
-        return $this->belongsToMany(Website::class);
+        return $this->belongsToMany(Website::class, 'website_subscribers', 'website_id', 'subscriber_id');
     }
 }
