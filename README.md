@@ -1,7 +1,7 @@
 # Simple Subscription
 A simple RESTful API subscription platform which allows users to subscribe to a website.
 Whenever a new post is published on a particular website,
-all it's subscribers receive an email with the post title and description in it.
+all its subscribers receive an email with the post title and description in it.
 
 
 ## How to run
