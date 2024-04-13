@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('description');
             $table->text('body');
             $table->unsignedBigInteger('website_id');
             $table->foreign('website_id')->references('id')->on('websites');
