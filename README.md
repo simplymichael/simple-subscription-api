@@ -39,13 +39,13 @@ all it's subscribers receive an email with the post title and description in it.
 
 
 ## Available API Routes
---------------------------------------------------------------------------
-ROUTE                            | METHOD | Description
---------------------------------------------------------------------------
-`/api/websites`                  | GET    | Get the list of available websites.
-`/api/websites/{id}/posts`,      | GET    | Get the posts for a given website.
-`/api/websites/{id}/posts/new`   | POST   | Create a new post for the given website.
-`/websites/{id}/subscribers/new` | POST   | Subscribe a new user to specified website.
+----------------------------------------------------------------------------------------|
+| ROUTE                           | METHOD | Description                                |
+|---------------------------------------------------------------------------------------|
+|`/api/websites`                  | GET    | Get the list of available websites.        |
+|`/api/websites/{id}/posts`,      | GET    | Get the posts for a given website.         |
+|`/api/websites/{id}/posts/new`   | POST   | Create a new post for the given website.   |
+|`/websites/{id}/subscribers/new` | POST   | Subscribe a new user to specified website. |
 
 
 ## Creating a new post
