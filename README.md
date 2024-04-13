@@ -70,7 +70,7 @@ So, do the following:
 To subscribe a new user to a website,
 - Send a GET request to: `/api/websites` to get the list of available websites.
 - Copy the ID of the website for which you want to subscribe a user.
-- Send a POST request to `/websites/{id}/subscribers/new` with the following body data:
+- Send a POST request to `/api/websites/{id}/subscribers/new` with the following body data:
   - `subscriber_email` [string] (required): The email of the user to subscribe
   - `subscriber_name` [string] (optional): The name of the user to subscribe.
 
