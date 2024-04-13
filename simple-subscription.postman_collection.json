@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "885d373a-5d78-4132-b7dc-e72b6c553f69",
+		"name": "inisev task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7346529",
+		"_collection_link": "https://martian-star-102484.postman.co/workspace/airofund-dev-workspace~f56aec1e-ed84-4f16-8e1b-54ae657c569f/collection/7346529-885d373a-5d78-4132-b7dc-e72b6c553f69?action=share&source=collection_link&creator=7346529"
+	},
+	"item": [
+		{
+			"name": "Get list of websites",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/websites",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"websites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get list of posts for specified website",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/websites/1/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"websites",
+						"1",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add post to website",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"\",\r\n    \"description\": \"\",\r\n    \"body\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/websites/1/posts/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"websites",
+						"1",
+						"posts",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subscribe a user to a website",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subscriber_email\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/websites/1/subscribers/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"websites",
+						"1",
+						"subscribers",
+						"new"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
