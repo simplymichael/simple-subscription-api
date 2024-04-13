@@ -5,18 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class WebsiteSubscriber extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'title',
-        'description',
-        'body',
         'website_id',
+        'subscriber_id',
     ];
-
-    public function website() {
-      return $this->belongsTo(Website::class);
-    }
 }
